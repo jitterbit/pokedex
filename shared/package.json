@@ -2,5 +2,5 @@
   "name": "@pokedex/shared",
   "version": "1.0.0",
   "private": true,
-  "main": "./interfaces/pokemon.interface.ts"
+  "main": "index.ts"
 }
