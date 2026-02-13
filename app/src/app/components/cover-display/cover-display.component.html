@@ -1,7 +1,16 @@
-<div class="absolute inset-0 bg-red-600 rounded-l-2xl border-4 border-red-800 shadow-xl flex flex-col p-6 items-center justify-center">
+<div class="absolute inset-0 bg-red-600 rounded-l-2xl rounded-r-sm shadow-xl flex flex-col p-6 items-center justify-center pt-24 overflow-hidden"
+     style="clip-path: path('M 0 85 Q 110 0, 320 0 L 320 520 L 0 520 Z');">
+    
+    <!-- 3D Border Overlay (Matching your manual path) -->
+    <svg class="absolute inset-0 w-full h-full pointer-events-none z-50" viewBox="0 0 320 520" preserveAspectRatio="none">
+      <path d="M 0 85 Q 110 0, 320 0 L 320 520 L 0 520 Z" 
+            fill="none" 
+            stroke="#991b1b" 
+            stroke-width="8" />
+    </svg>
     
     <!-- Triangular Decoration -->
-    <div class="absolute top-10 right-10 w-0 h-0 border-l-[30px] border-l-transparent border-b-[30px] border-b-yellow-500 border-r-[30px] border-r-transparent rotate-45 opacity-80"></div>
+    <div class="absolute top-6 right-3 w-0 h-0 border-l-[40px] border-l-transparent border-b-[40px] border-b-yellow-500 border-r-[40px] border-r-transparent rotate-45 opacity-80 translate-x-8 -translate-y-4"></div>
 
     <!-- LOGIN / REGISTRATION AREA -->
     <div class="w-full bg-slate-950 rounded-lg border-8 border-slate-800 p-4 shadow-[0_0_30px_rgba(0,0,0,0.6)] relative overflow-hidden">

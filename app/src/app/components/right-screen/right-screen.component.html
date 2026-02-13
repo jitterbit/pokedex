@@ -1,4 +1,13 @@
-<div class="absolute inset-0 bg-red-600 rounded-r-2xl border-4 border-red-800 shadow-xl flex flex-col p-6">
+<div class="absolute inset-0 bg-red-600 rounded-r-2xl shadow-xl flex flex-col p-6 pt-24 overflow-hidden"
+     style="clip-path: path('M 0 0 Q 310 0, 320 85 L 320 520 L 0 520 Z');">
+    
+    <!-- 3D Border Overlay (Matching your manual path) -->
+    <svg class="absolute inset-0 w-full h-full pointer-events-none z-50" viewBox="0 0 320 520" preserveAspectRatio="none">
+      <path d="M 0 0 Q 310 0, 320 85 L 320 520 L 0 520 Z" 
+            fill="none" 
+            stroke="#991b1b" 
+            stroke-width="8" />
+    </svg>
 
     <!-- Information Screen -->
     <div class="bg-slate-800 rounded p-3 h-28 border-4 border-slate-900 shadow-[inset_0_0_10px_rgba(0,0,0,1)] overflow-hidden mb-6 relative">
