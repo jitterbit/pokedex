@@ -42,8 +42,8 @@
         [selectedPokemon]="selectedPokemon()"
         [isOpen]="isOpen()"
         (onSelect)="selectPokemon($event)"
-        (onNext)="nextPage()"
-        (onPrev)="prevPage()">
+        (onNext)="toggleView()"
+        (onPrev)="loadMore()">
       </app-right-screen>
 
 
