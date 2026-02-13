@@ -31,6 +31,8 @@ services:
       dockerfile: app/Dockerfile
       args:
         NG_APP_API_URL: ${NG_APP_API_URL}
+        USER_ID: ${USER_ID:-1000}
+        GROUP_ID: ${GROUP_ID:-1000}
     container_name: pokedex_front_builder
     restart: "no" 
     volumes:
