@@ -1,0 +1,59 @@
+<div 
+  class="min-h-screen bg-slate-900 flex items-center justify-center p-4 font-mono overflow-hidden select-none"
+  (mousedown)="onMouseDown($event)"
+  (touchstart)="onMouseDown($event)"
+  (mouseup)="onMouseUp($event)"
+  (touchend)="onMouseUp($event)"
+>
+  <!-- Main Container -->
+  <div 
+    class="pokedex-body"
+    [style.transform]="isOpen() ? 'translateX(-160px)' : 'translateX(0)'"
+  >
+
+    <!-- Left Screen -->
+    <app-left-screen 
+      class="z-10"
+      [pokemon]="selectedPokemon()" 
+      [isOpen]="isOpen()">
+    </app-left-screen>
+
+
+    <!-- Central Hinge -->
+    <div class="w-8 h-[460px] mt-[30px] bg-red-700 border-x-4 border-red-900 z-20 flex flex-col justify-around py-10 rounded-full shadow-[inset_0_0_10px_rgba(0,0,0,0.5)]">
+      <div class="h-8 w-full border-y-2 border-red-900 bg-red-600"></div>
+      <div class="h-8 w-full border-y-2 border-red-900 bg-red-600"></div>
+    </div>
+
+
+    <!-- Right Screen (rotating) -->
+    <div 
+      class="relative w-80 h-[520px] mt-0 transition-all duration-700 origin-left"
+      style="transform-style: preserve-3d;"
+      [style.transform]="isOpen() ? 'rotateY(0deg)' : 'rotateY(-180deg)'"
+      [class.z-30]="isOpen()"
+      [class.z-50]="!isOpen()"
+    >
+
+      <!-- Internal Face (Visible when Open) -->
+      <app-right-screen 
+        class="absolute inset-0"
+        [pokemons]="pokemons()"
+        [selectedPokemon]="selectedPokemon()"
+        [isOpen]="isOpen()"
+        (onSelect)="selectPokemon($event)"
+        (onNext)="nextPage()"
+        (onPrev)="prevPage()">
+      </app-right-screen>
+
+
+      <!-- External Face (Visible when Closed) -->
+      <app-cover-display 
+        class="absolute inset-0"
+        (onUnlock)="toggleOpen()">
+      </app-cover-display>
+
+    </div>
+
+  </div>
+</div>
