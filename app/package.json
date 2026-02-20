@@ -11,6 +11,16 @@
     "url": "https://github.com/jitterbit/pokedex.git",
     "directory": "app/"
   },
+  "engines": {
+    "node": "24"
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "24",
+      "onFail": "error"
+    }
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -19,22 +29,22 @@
     "test": "ng test"
   },
   "dependencies": {
-    "@angular/animations": "^18.0.1",
-    "@angular/common": "^18.0.1",
-    "@angular/compiler": "^18.0.1",
-    "@angular/core": "^18.0.1",
-    "@angular/forms": "^18.0.1",
-    "@angular/platform-browser": "^18.0.1",
-    "@angular/platform-browser-dynamic": "^18.0.1",
-    "@angular/router": "^18.0.1",
-    "rxjs": "^7.8.1",
-    "tslib": "^2.6.3",
-    "zone.js": "~0.14.6"
+    "@angular/animations": "^21.1.5",
+    "@angular/common": "^21.1.5",
+    "@angular/compiler": "^21.1.5",
+    "@angular/core": "^21.1.5",
+    "@angular/forms": "^21.1.5",
+    "@angular/platform-browser": "^21.1.5",
+    "@angular/platform-browser-dynamic": "^21.1.5",
+    "@angular/router": "^21.1.5",
+    "rxjs": "^7.8.2",
+    "tslib": "^2.8.1",
+    "zone.js": "~0.16.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^18.0.2",
-    "@angular/cli": "^18.0.2",
-    "@angular/compiler-cli": "^18.0.1",
-    "typescript": "~5.4.5"
+    "@angular-devkit/build-angular": "^21.1.4",
+    "@angular/cli": "^21.1.4",
+    "@angular/compiler-cli": "^21.1.5",
+    "typescript": "^5.9.3"
   }
 }
